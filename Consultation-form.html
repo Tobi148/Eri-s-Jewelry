@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="../CSS files/Consultation-form.css" />
+
+    
+  <!-- =============FAVICON LINK=============== -->
+
+  <link rel="icon" type="image/svg+xml" href="../asset-folder/favicon.svg">
+  <link rel="icon" type="image/png" href="../asset-folder/favicon.png">
+  
+    <!-- ====================FONT & ICON RESOURCE LINKS================= -->
+  
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
+    <title>Online Consultation Form</title>
+
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="logo-container">
+
+
+        <div class="text-tagline">
+          <div class="logo-text">Eri's Jewelry</div>
+          <div class="logo-tagline">Jewelry that refelects your style</div>
+        </div>
+      </div>
+  
+          
+        <h1>Online Consultation Form</h1>
+      <form id="consultationForm">
+        <div class="form-group001">
+          <label class="full-name" for="fullName">Full Name *</label>
+
+          <div class="name-types">
+
+            <div class="prefix">
+
+              <input type="text" id="prefix" name="prefix">
+
+              <label class="name-fild" for="fullName">Prefix (Not Compulsory)</label>
+
+            </div>
+
+            <div class="first-name">
+              <input type="text" id="firstName" name="firstName" required>
+
+              <label class="name-fild"  for="fullName">First Name </label>
+                      
+            </div>
+
+            <div class="middle-name">
+
+              <input type="text" id="middleName" name="middleName">
+              <label class="name-fild"  for="fullName">Middle Name </label>
+
+            </div>
+
+            <div class="last-name">
+
+              <input type="text" id="lastName" name="lastName" required>
+              <label class="name-fild"  for="fullName">Last Name </label>
+                        
+            </div>
+
+          </div>
+          
+        </div>       
+       
+                <div class="form-group005">
+                    <label for="email">Email address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                
+                <div class="Address">
+                    <label for="Address">Address*</label>
+                    <input type="Address" id="Address" name="Address" required>
+                </div>
+                <div class="form-group007">
+                    <label for="problem">Write a message *</label>
+                    <textarea id="problem" name="problem" rows="4" required></textarea>
+                </div>
+                <button>Submit
+                  <a href="./Home.html"></a>
+                </button>
+      </form>
+    </div>
+    
+    <script src="../javascript/main.js">
+     
+
+    </script>
+
+
+  </body>
+</html>

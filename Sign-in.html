@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../CSS files/Sign-in.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+</head>
+<body>
+    
+<form action="connect.php" method="post">
+
+    <!--============= Sign In Page ====================-->
+
+  <div class="container">
+    
+    <header>
+      <div class="logo-text">
+        <h1>Eri's Jewelry</h1>
+        <p>Jewelry that reflects your style
+        </p>
+      </div>
+    </header>
+    <h2>Sign in to your account</h2>
+    <label for="first">
+        First name:
+  </label>
+  <input type="text" 
+         id="firstname" 
+         name="firstName" 
+         placeholder="Your First Name" required>
+
+         <label for="first">
+          Last name:
+    </label>
+    <input type="text" 
+           id="lastname" 
+           name="lastName" 
+           placeholder="Your Last Name" required>
+  
+         <label for="Email">
+               Email:
+         </label>
+         <input type="email"
+                id="email" 
+                name="email"
+                placeholder="Enter your Email" required>
+
+  <label for="password">
+        Password:
+  </label>
+  <input type="password"
+         id="password" 
+         name="password"
+         placeholder="Enter your Password" required>
+        <button class="btn btn-signin">Sign In
+          <a href="./Msg-confirmed.html"></a>
+        </button>
+    <div class="signup-link">
+        Don't have an account? <a href="./Sign-up.html">Sign up</a>
+    </div>
+</div>
+</form>
+
+</body>
+</html>

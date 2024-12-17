@@ -1,0 +1,737 @@
+html {
+    box-sizing: border-box;
+    scrollbar-width: none;
+    background-color: plum;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'inter', Epilogue, Gill Sans, Gill Sans ;
+    font-size: auto;
+  }
+  /* =============HEADER AND NAVIGATION SECTION=========== */
+  .header-container{
+    
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    
+   
+  }
+  
+  .nav-bar{
+    background-color: white;
+    /* max-width: 1440px; */
+    padding: 30px 112px ;
+    display: flex;
+    justify-content: space-between;
+    
+    
+  }
+  
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    cursor: pointer;
+    gap: 8px;
+  }
+  
+  
+  .logo-header{
+    font-family: comfortaa;
+    background-image: linear-gradient(90deg, #0a960a 0%, #0a960a 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: 700;
+    /* text-fill-color: transparent; */
+  }
+  
+  .menu-option{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-left: auto; /* This pushes the menu options to the right */
+    
+  }
+  
+  .nav-links li.active a {
+    color: #08b5ff;
+    padding: 0 10px ;
+    border-bottom:2px solid #01bbff;
+    /* Add any other styles you want for the active state */
+  }
+  
+  .nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    /* color: #ffffff; */
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .hova a:hover {
+    color: #ea0303;
+    padding: 0 10px ;
+    border-bottom:2px solid #ea0303;
+  }
+  
+  .btn-sign-in{
+    display: flex;
+    justify-content: center;
+    width: 90px;
+    padding: 5px;
+    background-color: #03ea032d;
+    border-radius:10px 5px;
+  
+    
+  }
+  
+  .btn-sign-in a{
+    color: #059805;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .btn-sign-in:hover{
+    background-color:#059805 ;
+    
+  }
+  
+  .btn-sign-in a:hover{
+    color:#fcfcfc ;
+  }
+  
+  
+  /*===========HAMBURGER MENU STYLES============= */
+  
+  
+  .hamburger-menu {
+    position: absolute;
+    right: 0;
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+    align-items: center ;
+  }
+  
+  .hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #0a960a;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  /* ============SHOW & HIDE TABLET/MOBILE MENU STYLES============= */
+  
+  .show-mobile-menu {
+    right: 0 !important;
+   
+  }
+  
+  .hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger-line.open:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* ============TABLET & MOBILE MENU STYLES=========== */
+  
+  .mobile-menu {
+    position: fixed;
+    /* top: 138px; */
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 999;
+    transition: right 0.7s ease;
+    padding: 20px;
+  }
+  
+  .mmb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width:300px;
+    padding: 5px;
+    background-color: #03ea032d;
+    border-radius:10px 5px;
+  }
+  
+  .mmb:hover{
+    background-color: #075a074a;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fcfcfc;
+  }
+  
+  .mmb .signintext:hover{
+    color: #fbfcfb;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: none;
+  }
+  .mobile-nav ul {
+    list-style: none;
+    margin-left: 70px;
+    padding-top: 10px;
+  }
+  
+  .mobile-nav li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    text-align: center;
+  
+  }
+  
+  .mobile-nav a {
+    color: #033f4b;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 700;
+   
+  }
+  
+  .mobile-nav a:hover {
+    color: #03EA03;
+    padding: 0 10px 0 10px;
+    border-bottom:2px solid #03EA03;
+  }
+  
+  
+  /* =============MOBILE NAV SUB MENU STYLES=============== */
+  
+  .mobile-nav ul li:hover .sub-menu-1 {
+    display: inline-block;
+    position: absolute;
+    background-color: #fefffe;
+    margin-top: 2px;
+    margin-left: 15px;
+    /* border-radius: 8px; */
+    /* box-shadow: inset 1 20 10px rgba(51, 54, 54, 0.872); */
+  }
+  
+  .mobile-nav ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 16px;
+  }
+  
+  .mobile-nav ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 16px;
+    border-bottom: 1px dotted #065666;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+  }
+  
+  .mobile-nav ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .mobile-nav ul li:hover .sub-menu-1 ul li a:hover {
+    color: #6FC247;
+  }
+  .sub-menu-1 ul li .sub{
+    color: #065666;
+  }
+  
+  .none{
+    font-size: 15px;
+  }
+  
+  .after-hero {
+    /* display: none; */
+    height: 730px;
+    padding: 24px 28px 24px 28px;
+    /* border: 2px solid red; */
+  }
+  
+  .after-hero .after-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .after-hero-img img {
+    width: 100%;
+  }
+  
+  .after-hero .after-hero-container .after-hero-content {
+    width: 100%;
+    height: 137.5px;
+    padding: 0 12px;
+    margin-left: 0;
+  }
+  
+  .after-hero-content h1 {
+    font-size: 30px !important;
+    /* line-height: 40px; */
+  }
+  
+  .after-hero-content h2 {
+    font-size: 22px !important;
+  }
+  
+  .after-hero-content p {
+    font-size: 12px !important;
+    line-height: 16px !important;
+  }
+  
+  .after-hero-content{
+    font-size: 100px;
+  }
+
+  .aboutUs-banner-content {
+    
+    text-align: center;
+    padding-top: 40vh;
+  }
+
+  .aboutUs-banner-content h2 {
+    font-size: 56px;
+    line-height: 64px;
+    padding-top: 50px;
+  }
+  .about-herro {
+    padding: 30px 50px;
+    gap: 40px;
+    flex-direction: column;
+    
+  }
+
+  .herro-images-1 {
+    width: 100%;
+    height: auto;
+    padding-left: 90px;
+  }
+
+
+
+  .aboutUs-banner {
+    position: relative;
+    background-image: url(../Images/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .aboutUs-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  
+  .aboutUs-banner-content {
+    position: relative;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 20vh;
+  }
+  
+  .aboutUs-banner-content h2{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 62.75px;
+    padding-top: 100px;
+  }
+  
+  /* =========ABOUT HERRO SECTION STYLES============ */
+  
+  .about-herro{
+    display: flex;
+    padding: 40px 90px;
+    gap:80px;
+    margin:  60px 40px;
+  }
+  
+  .herro-images-1{
+    width: 407px;
+    height: 601px;
+  }
+
+.herro-images-2{
+  position: absolute;
+  right: 990px;
+  bottom: -640px;
+  width: 220px;
+  height: 321px;
+}
+
+.herro-text{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 650.19px;
+  left: 600px;
+  gap: 20px;
+
+}
+
+.herro-text h2{
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.57px;
+  text-align: left;
+  width: 485.48px;
+  height: 115.2px;
+  top: -0.31px;
+
+}
+
+.about-intro{
+font-size: 18px;
+font-weight: 500;
+line-height: 30px;
+text-align: left;
+color: #545454;
+
+}
+
+.about-main {
+font-size: 20px;
+font-weight: 700;
+line-height: 30px;
+text-align: left;
+color: #108210;
+}
+
+.slogan{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+font-size: 18px;
+font-weight: 700;
+line-height: 36px;
+text-align: left;
+
+}
+
+.nike-icon-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.discorver-moer-btn{
+  width: 196.31px;
+height: 60px;
+padding: 15px 50px 15px 50px;
+border-radius: 10px ;
+background: #108210;
+margin-top: 20px;
+
+}
+
+.discorver-moer-btn a{
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: #fff;
+}
+
+/* ==========ABOUT US BANNER SECTION============ */
+
+  .aboutUs-banner-content {
+    
+    text-align: center;
+    padding-top: 40vh;
+  }
+
+  .aboutUs-banner-content h2 {
+    font-size: 56px;
+    line-height: 64px;
+    padding-top: 50px;
+  }
+  .about-herro {
+    padding: 30px 50px;
+    gap: 40px;
+    flex-direction: column;
+    
+  }
+
+  .herro-images-1 {
+    width: 100%;
+    height: auto;
+    padding-left: 90px;
+  }
+
+  .herro-images-2 {
+    right: 400px;
+    bottom: -690px;
+    width: 350px;
+    height: auto;
+  }
+
+  .herro-text {
+    width: 100%;
+  }
+
+  .herro-text h2 {
+    font-size: 28px;
+    line-height: 34px;
+    width: 100%;
+  }
+
+  .hero-001{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .check{
+    font-size: 25px;
+  }
+
+  /*  =========FOOTER SECTION STYLES========== */
+
+.footer{
+  background-color: #053205;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  
+}
+
+.footer-logo{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+li{
+  list-style: none;
+  color: white;
+}
+
+.logo-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text h1{
+  color: #fff;
+  font-family: Comfortaa;
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 107.04px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.logo-text p{
+  font-family: Roboto Serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 31.62px;
+  letter-spacing: -0.01em;
+  text-align: left;
+
+}
+
+.footer-logo .img-box-2 img{
+  width: 86px;
+  height: 80px;
+}
+
+.quick-links li{
+ padding: 15px;
+ font-size: 12px;
+ 
+}
+
+.Our-Services li{
+  padding: 15px;
+  font-size: 12px
+}
+
+.quick-links li h3{
+  text-align: start;
+}
+
+.Our-Services li h3{
+  text-align: start;
+}
+
+.Contact{
+  margin-top: 50px;
+  align-items:start;
+  
+}
+
+ .contact-header a {
+  display: flex;
+  justify-content: left;
+  text-align: start;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.call-icon, .message, .address{
+
+ margin-bottom:15px;
+  border-bottom:2px solid #fff;
+}
+
+.call-icon img, .message img, .address img{
+   padding-right: 10px;
+   color: #fff;
+   
+}
+
+.social-icons{
+  display: flex;
+  gap :30px;
+  align-items: start;
+  padding: 15px;
+}
+
+#signupPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 800px;
+  width: 90%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.footer {
+  /* width: 100%; */
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.footer > div {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-text h1 {
+  font-size: 48px;
+  line-height: 54px;
+  
+}
+
+.logo-text p {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.footer-logo .img-box-2 img {
+  width: 60px;
+  height: 56px;
+}
+
+.quick-links, .Our-Services, .Contact {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.quick-links ul li h3{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Our-Services ul li h3{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-header a{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} 
+
+.social-icons {
+  justify-content: center;
+} 
